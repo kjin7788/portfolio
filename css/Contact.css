@@ -1,0 +1,300 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+.container{
+    width: 100%;
+    display: flex;
+}
+.container .left-container{
+    /* display: inline-block; */
+    width: 50%;
+    height: 100vh;
+    background-color: #FD5A47;
+}
+.container .left-container h1{
+    font-size: 80px;
+    color: #fff;
+    font-family: "Lilita One", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    padding: 50px 0;
+}
+.container .left-container ul{
+}
+.container .left-container ul li{
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.container .left-container ul li label{
+    font-size: 14px;
+}
+.container .left-container ul li input{
+    background-color: transparent;
+    border: 3px solid #fff;
+    border-radius: 5px;
+    width: 400px;
+    height: 50px;
+    padding-left: 15px;
+    outline: none;
+    color: #fff;
+}
+.container .left-container ul li input::placeholder{
+    color: #fff;
+}
+.container .left-container ul li textarea{
+    background-color: transparent;
+    border: 3px solid #fff;
+    border-radius: 5px;
+    width: 400px;
+    height: 240px;
+    padding-top: 20px;
+    padding-left: 20px;
+    outline: none;
+    color: #fff;
+}
+.container .left-container ul li textarea::placeholder{
+    color: #fff;
+}
+.container .left-container .contact{
+    text-align: center;
+}
+.container .left-container .contact img{}
+.container .left-container .contact a{
+    background-color: #fff;
+    color: #FD5A47;
+    padding: 8px 38px;
+    border-radius: 6px;
+}
+.container .left-container .img{
+    position: absolute;
+    bottom: 16%;
+    left: 5%;
+}
+.container .left-container .img2{
+    position: absolute;
+    bottom: 14%;
+    left: 36%;
+    transform: rotateY(180deg);
+}
+
+.container .right-container{
+    position: relative;
+    width: 50%;
+    height: 100vh;
+    background: url(../images/about.png)no-repeat center center;
+    background-size: cover;
+}
+.container .right-container .insta{
+    width: 15%;
+    object-fit: cover;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+}
+.container .right-container .facebook{
+    width: 15%;
+    position: absolute;
+    top: 15%;
+    left: 70%;
+}
+.container .right-container .messenger{
+    width: 15%;
+    position: absolute;
+    top: 65%;
+    left: 15%;
+}
+.container .right-container .phone{
+    width: 15%;
+    position: absolute;
+    top: 65%;
+    left: 70%;
+}
+.container .right-container .insta img,
+.container .right-container .facebook img,
+.container .right-container .messenger img,
+.container .right-container .phone img{
+    width: 100%;
+}
+.container .bar{
+    z-index: 99;
+    position: fixed;
+    bottom: 5.4%;
+    width: 100%;
+    height: 50px;
+    background-color: #009A5E;
+}
+.container .bar p{
+    text-align: center;
+    line-height: 50px;
+}
+/* 반응형 */
+@media screen and (max-width:1300px) {
+    .container .left-container h1 {
+        font-size: 70px;
+        padding: 30px 0;
+    }
+    .container .left-container .img{
+        bottom: 14%;
+        left: 2%;
+    }
+    .container .left-container .img2{
+        bottom: 12%;
+        left: 36%;
+    }
+    .container .left-container .img img{
+        width: 60%;
+    }
+    .container .left-container .img2 img{
+        width: 60%;
+    }
+
+}
+@media screen and (max-width:1000px) {
+    .container .left-container h1 {
+        font-size: 60px;
+        padding: 20px 0;
+    }
+    .container .left-container .img{
+        bottom: 18%;
+        left: 2%;
+    }
+    .container .left-container .img2{
+        bottom: 16%;
+        left: 34%;
+    }
+    .container .left-container ul li input {
+        width: 360px;
+    }
+    .container .left-container ul li textarea{
+        width: 360px;
+        height: 210px;
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+}
+@media screen and (max-width:768px) {
+    .container .left-container{
+        width: 100%;
+        height: 100vh;
+    }
+    .container .bar{
+        bottom: 0%;
+    }
+    .container .left-container .img{
+        bottom: 24%;
+        left: 14%;
+    }
+    .container .left-container .img2{
+        bottom: 22%;
+        left: 70%;
+    }
+    .container .right-container{
+        position: inherit;
+        width: 0;
+        height: 0;
+        background: none;
+    }
+    .container .right-container .insta{
+        top: 82%;
+        left: 26%;
+    }
+    .container .right-container .facebook{
+        top: 82%;
+        left: 38%;
+    }
+    .container .right-container .messenger{
+        top: 82%;
+        left: 50%;
+    }
+    .container .right-container .phone{
+        top: 82%;
+        left: 62%;
+    }
+    .container .right-container .insta,
+    .container .right-container .facebook,
+    .container .right-container .messenger,
+    .container .right-container .phone{
+        width: 10%;
+    }
+}
+@media screen and (max-width:620px) {
+    .container .left-container .img{
+        bottom: 24%;
+        left: 6%;
+    }
+    .container .right-container .insta{
+        left: 22%;
+    }
+    .container .right-container .facebook{
+        left: 36%;
+    }
+    .container .right-container .messenger{
+        left: 50%;
+    }
+    .container .right-container .phone{
+        left: 64%;
+    }
+    .bar p{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width:476px) {
+    .container .left-container h1 {
+        font-size: 50px;
+        padding: 10px 0;
+    }
+    .container .left-container .img{
+        left: 0%;
+    }
+    .container .right-container .insta{
+        top: 86%;
+        left: 18%;
+    }
+    .container .right-container .facebook{
+        top: 86%;
+        left: 36%;
+    }
+    .container .right-container .messenger{
+        top: 86%;
+        left: 54%;
+    }
+    .container .right-container .phone{
+        top: 86%;
+        left: 72%;
+    }
+    .bar p{
+        font-size: 10px;
+    }
+}
+@media screen and (max-width:375px){
+    .container .left-container h1 {
+        font-size: 40px;
+        padding:10px 0;
+    }
+    .container .left-container ul li input {
+        width: 320px;
+    }
+    .container .left-container ul li textarea{
+        width: 320px;
+        height: 140px;
+        padding-top: 14px;
+        padding-left: 14px;
+    }
+}

@@ -1,0 +1,149 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+header h1{
+    font-family: "Lilita One", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    font-size: 5vw;
+    padding: 26px 0;
+}
+.about-wrap{
+    width: 100%;
+    height: 77vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background: url(../images/about.png)no-repeat center center;
+    background-size: cover;
+}
+.about-wrap .name,
+.mind,
+.education,
+.tools{
+    padding: 40px 0 0 80px;
+    /* border: 1px solid #000; */
+}
+.about-wrap .name{
+    /* background-color: #FFC567; */
+}
+.about-wrap h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.about-wrap p{
+    font-size: 20px;
+    line-height: 32px;
+}
+.about-wrap .mind{}
+.about-wrap .education{}
+.about-wrap .tools{
+    /* background-color: #FFC567; */
+}
+.tool-box{}
+.tool-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.tool-box span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: all 0.3s;
+    cursor: pointer;
+    width: 33.3%;
+    margin-bottom: 16px;
+}
+.tool-box span img{
+    width: 3vw;
+}
+.tool-box span img:hover{
+    transform: rotate(360deg);
+    transition: .5s;
+}
+.tool-box span i{
+    font-size: 3.5vw;
+}
+.tool-box span i:hover{
+    transform: rotate(360deg);
+    transition: .5s;
+}
+@media all and (max-width:1160px) {
+    .about-wrap{
+        height: 80vh;
+    }
+    .about-wrap h2{
+        font-size: 24px;
+    }
+    .about-wrap p{
+        font-size: 14px;
+        line-height: 26px;
+    }
+}
+@media all and (max-width:850px) {
+    .about-wrap{
+        height: 86vh;
+    }
+    .about-wrap .name,
+    .mind,
+    .education,
+    .tools{
+    padding: 30px 0 0 30px;
+    }
+    .tool-box span {
+        font-size: 9px;
+    }
+}
+@media all and (max-width:768px) {
+    .about-wrap .name,
+    .mind,
+    .education,
+    .tools{
+    padding: 30px 0 0 50px;
+    }
+    .about-wrap h2{
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .about-wrap p {
+        font-size: 12px;
+        line-height: 26px;
+    }
+}
+@media all and (max-width:480px) {
+    .about-wrap h2{
+        font-size: 12px;
+        margin-bottom: 6px;
+    }
+    .about-wrap p{
+        font-size: 10px;
+        line-height: 18px;
+    }
+}
+@media all and (max-width:400px) {
+    .about-wrap .name, .mind, .education, .tools {
+        padding: 28px 0 0 28px;
+    }
+    .about-wrap h2{
+        font-size: 10px;
+        margin-bottom: 6px;
+    }
+    .about-wrap p{
+        font-size: 8px;
+        line-height: 18px;
+    }
+}
