@@ -1,0 +1,159 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+body{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+.wrap header h1{
+    font-family: "Lilita One", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4.5vw;
+    text-align: center;
+    padding: 50px 0;
+    background-color: #1C96D9;
+    border: 1px solid #000;
+}
+.content {
+    position: relative;
+    
+}
+.content .text {
+    position: absolute;
+    top:0;
+    left:0;
+    display: inline-block;
+    width: 100%;
+    overflow-x:hidden;
+    background-color: rgba(0, 0, 0, 0.88);
+}
+.content .text span {
+    font-size: 4vw;
+    font-weight: 700;
+    margin: 0 60px 0;
+    transition: all ease .5s;
+}
+.content .text span:nth-child(odd),
+.content .text span:nth-child(even):hover {
+    /* color: transparent; */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
+} 
+.content .text span:nth-child(odd):hover{
+    /* color: #fff; */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
+} 
+.content .text .line {
+    white-space: nowrap;
+    animation: infiniteText 15s linear infinite;
+    cursor:pointer;
+    animation-play-state: running;
+    width: max-content;
+    height: 345px;
+    display: flex;
+    align-items: center;
+}
+.content .text .line1 span:first-child,
+.content .text .line2 span:nth-child(3),
+.content .text .line2 span:nth-child(6){
+    color: #1C96D9;
+    font-size: 4vw;
+}
+@keyframes infiniteText {
+    0% {transform: translateX(2%);}
+    100% {transform: translateX(-80%);}
+}
+.content .text .line2 {            
+    animation-direction: reverse;
+    /* background-color: #FD5A47;    */
+}
+.content .text .line:hover {
+    animation-play-state: paused;
+}
+/* 모달 기본 스타일 */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 10%;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+/* 모달 내용 */
+.modal-content {
+    margin: 0 auto;
+    padding: 20px;
+    width: 80%;
+    height: auto;
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+}
+
+/* 닫기 버튼 */
+.close {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: .8;
+    color: #000;
+    font-size: 28px;
+    font-weight: bold;
+    position: fixed;
+    top: 11%;
+    right: 11%;
+    text-align: center;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.close:hover,
+.close:focus {
+    color: #777;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 이미지 표시 */
+#modalImages {
+    display: flex;
+}
+@media screen and (max-width:768px) {
+    .content .text .line {
+        height: 230px;
+    }
+    .modal-content {
+        width: 100%;
+    }
+    .close {
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+        line-height: 30px;
+        top: 11%;
+        right: 1%;
+
+    }
+    
+}

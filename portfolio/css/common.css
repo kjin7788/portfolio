@@ -1,0 +1,191 @@
+:root{
+    --var-home-color: #FC7DA8;
+    --var-About-color: #FFC567;
+    --var-Wep-Publishing-color: #552CB8;
+    --var-Design-Wokr-color: #048CD6;
+    --var-Contact-color: #FD5A47;
+}
+/* 모바일 메뉴 버튼 */
+.mb-btn{
+    position:fixed;
+    right: 20px;
+    top: 25px;
+    width: 24px;
+    height: 14px;
+    z-index: 99;
+    display: none;
+}
+.mb-btn::before{
+    content: '';
+    display:block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+}
+.mb-btn .line{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+}
+.mb-btn::after{
+    content: '';
+    content: '';
+    display:block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+}
+/* 모바일메뉴버튼 X모양 */
+.mb-btn.active::before{
+    top: 50%;
+    transform: rotate(45deg);
+    transition: all 0.3s;
+}
+.mb-btn.active .line{
+    width: 0;
+}
+.mb-btn.active::after{
+    top: 50%;
+    transform: rotate(-45deg);
+    transition: all 0.3s;
+}
+/* 모바일 메뉴 */
+.mb-menu{
+    width: 100%;
+    position: fixed;
+    z-index: 98;
+    transform: translateY(-110%);
+    transition: transform 0.5s ease;
+}
+.mb-menu ul {
+    display: flex;
+    flex-direction: column;
+}
+.mb-menu.active {
+    transform: translateY(0);
+}
+.mb-menu ul li{
+    font-family: "Lilita One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.mb-menu ul li:nth-child(1){
+    background-color: var(--var-home-color);
+}
+.mb-menu ul li:nth-child(2){
+    background-color: var(--var-About-color);
+}
+.mb-menu ul li:nth-child(3){
+    background-color: var(--var-Wep-Publishing-color);
+}
+.mb-menu ul li:nth-child(4){
+    background-color: var(--var-Design-Wokr-color);
+}
+.mb-menu ul li:nth-child(5){
+    background-color: var(--var-Contact-color);
+}
+.mb-menu ul li img{
+    width: 50px;
+}
+.mb-menu ul li a{
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mb-menu ul li a:hover{
+    color: #fff;
+    transform: scale(1.5);
+}
+/* 모바일 반응형 */
+@media all and (max-width:768px) {
+    .mb-btn{
+        display: block;
+    }
+}
+footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 99;
+}
+footer ul{
+    display: flex;
+}
+footer ul li{
+    width: 24%;
+    height: 50px;
+    line-height: 48px;
+    text-align: center;
+    border: 1px solid #000;
+    background-color: #fff;
+}
+footer ul li:nth-child(1):hover a{
+    background-color: #552CB8;
+    color: #fff;
+    transition: all 0.3s;
+}
+footer ul li:nth-child(2):hover a{
+    background-color: #FFC567;
+    color: #fff;
+    transition: all 0.3s;
+}
+footer ul li:nth-child(3):hover a{
+    background-color: #FC7DA8;
+    color: #fff;
+    transition: all 0.3s;
+}
+footer ul li:nth-child(4):hover a{
+    background-color: #1C96D9;
+    color: #fff;
+    transition: all 0.3s;
+}
+footer ul li:nth-child(5):hover a{
+    background-color: #FD5A47;
+    color: #fff;
+    transition: all 0.3s;
+}
+footer ul li:nth-child(3){
+    width: 90px;
+}
+footer ul li a{
+    display: block;
+    font-size: 20px;
+    font-family: "Lilita One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+footer ul li img{
+    padding-top: 8px;
+    object-fit: cover;
+    width: 40px;
+}
+@media all and (max-width:630px) {
+    footer ul li a{
+        font-size: 16px;
+    }
+}
+@media all and (max-width:501px) {
+    footer ul li a{
+        font-size: 12px;
+    }
+}
+@media all and (max-width:390px) {
+    footer ul li a{
+        font-size: 10px;
+    }
+}
+@media all and (max-width:768px){
+    footer{
+        display: none;
+    }
+}

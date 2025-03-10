@@ -1,0 +1,124 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+header h1 {
+    font-family: "Lilita One", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    font-size: 5vw;
+    padding: 26px 0;
+}
+.about-wrap {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background: url(../images/about.png) no-repeat center center;
+    background-size: cover;
+    text-align: center;
+    padding-top: 20px;
+}
+.about-wrap .name,
+.mind,
+.education,
+.tools {
+    width: 50%;
+    height: 358px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+.about-wrap .name:hover,
+.about-wrap .mind:hover,
+.about-wrap .education:hover,
+.about-wrap .tools:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+.about-wrap h2{
+    font-size: 2.5vw;
+    padding-bottom: 10px;
+}
+.about-wrap p{
+    font-size: 1.5vw;
+    line-height:50px;
+}
+.tool-box span {
+    font-size: 1.5vw;
+}
+.about-wrap h2, .about-wrap p, .tool-box span {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.about-wrap .name:hover h2,
+.about-wrap .mind:hover h2,
+.about-wrap .education:hover h2,
+.about-wrap .tools:hover h2,
+.about-wrap .name:hover p,
+.about-wrap .mind:hover p,
+.about-wrap .education:hover p,
+.about-wrap .tools:hover p,
+.about-wrap .tools:hover .tool-box span {
+    opacity: 1;
+    transform: translateY(0);
+}
+.tool-box {
+    display: flex;
+    flex-wrap: wrap;
+}
+.tool-box span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: all 0.3s;
+    cursor: pointer;
+    width: 33.3%;
+    margin-bottom: 16px;
+}
+.tool-box span img {
+    width: 3vw;
+    transition: transform 0.5s ease;
+}
+.tool-box span:hover img, .tool-box span:hover i {
+    transform: rotate(360deg) scale(1.1);
+}
+.tool-box span i {
+    font-size: 3.5vw;
+    transition: transform 0.5s ease;
+}
+@media all and (max-width: 1160px) {
+
+}
+@media all and (max-width: 850px) {
+
+}
+@media all and (max-width: 768px) {
+    .about-wrap .name,
+    .mind,
+    .education,
+    .tools {
+        height: 280px;
+        padding-top: 60px;
+    }
+    .about-wrap p{
+        line-height:30px;
+    }
+}
+@media all and (max-width: 480px) {
+
+}
+@media all and (max-width: 400px) {
+    .about-wrap p{
+        line-height:20px;
+    }
+}
